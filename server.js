@@ -59,11 +59,11 @@ function fetchNCF(rnc, ncf) {
     return result;
 }
 
-// app.get("/", function(req, res) {
-//     res.sendFile(__dirname + "/index.html");
-// });
+app.get("/", function(req, res) {
+    res.sendFile(__dirname + "/index.html");
+});
 
-app.get("/", async function(req, res) {
+app.get("/rnc", async function(req, res) {
     const $ = await fetchRNC(req.query.rnc);
     const value = {
         encontrado: false,
